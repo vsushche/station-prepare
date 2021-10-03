@@ -17,7 +17,7 @@ sudo rm -rf /var/lib/docker /var/lib/containerd /etc/docker
 echo "Download and run installation script"
 curl -fsSL https://get.docker.com | sh
 echo "Make managing Docker by a non-root user"
-sudo groupadd docker
+sudo groupadd docker || true
 sudo usermod -aG docker $USER
 newgrp docker
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
