@@ -4,4 +4,5 @@ curl -fsSL https://raw.githubusercontent.com/vsushche/station-prepare/main/insta
 curl -fsSL https://raw.githubusercontent.com/vsushche/station-prepare/main/install-git.sh | sh
 curl -fsSL https://raw.githubusercontent.com/vsushche/station-prepare/main/install-nodejs.sh | sh
 curl -fsSL https://raw.githubusercontent.com/vsushche/station-prepare/main/install-docker.sh | sh
+curl -fsSL https://raw.githubusercontent.com/vsushche/station-prepare/main/install-docker-compose.sh | sh
 

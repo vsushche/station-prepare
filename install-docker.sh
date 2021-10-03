@@ -34,3 +34,4 @@ do
 done
 echo "Run a test image"
 docker run --rm hello-world
+docker info
