@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
 echo Install Tools
-yum -y install mc
+sudo sudo dnf update -y
+sudo dnf -y install mc
