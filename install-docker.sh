@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 echo "Remove the previous version"
-yum remove -y docker \
+sudo yum remove -y docker \
     docker-client \
     docker-client-latest \
     docker-common \
@@ -13,15 +13,15 @@ yum remove -y docker \
     runc \
     docker-ce docker-ce-cli
 echo "Remove images"
-rm -rf /var/lib/docker /var/lib/containerd /etc/docker
+sudo rm -rf /var/lib/docker /var/lib/containerd /etc/docker
 echo "Download and run installation script"
 curl -fsSL https://get.docker.com | sh
 echo "Enable autostart"
-systemctl enable docker.service
-systemctl enable containerd.service
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
 echo "Start Docker service"
 sleep 1
-until systemctl start docker
+until sudo systemctl start docker
 do
     echo "Wait 10s"
     sleep 10
